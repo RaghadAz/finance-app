@@ -1,0 +1,51 @@
+import 'package:finance_app/core/styling/app_colors.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class CustomTextField extends StatelessWidget {
+  final String? hintText;
+  final Widget? suffixIcon;
+  final double? width;
+  final bool? isPassword;
+  const CustomTextField({
+    super.key,
+    this.hintText,
+    this.suffixIcon,
+    this.width,
+    this.isPassword,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: width ?? 331.w,
+      child: TextField(
+        obscureText: isPassword ?? false,
+        cursorColor: AppColors.primaryColor,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 18.w,
+            vertical: 10.w,
+          ),
+          hintText: hintText ?? " ",
+          hintStyle: TextStyle(
+            fontSize: 15.sp,
+            fontWeight: FontWeight.w500,
+            color: Color(0xff8391A1),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(color: Color(0xffE8ECF4), width: 1.sp),
+          ),
+          filled: true,
+          fillColor: Color(0xffF7F8F9),
+          suffixIcon: suffixIcon,
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppColors.primaryColor, width: 1.sp),
+            borderRadius: BorderRadius.circular(8.r),
+          ),
+        ),
+      ),
+    );
+  }
+}
