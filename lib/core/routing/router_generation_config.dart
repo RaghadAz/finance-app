@@ -1,9 +1,11 @@
 import 'package:finance_app/core/routing/app_routes.dart';
-import 'package:finance_app/features/auth/create_new_password.dart';
-import 'package:finance_app/features/auth/forgot_password.dart';
+import 'package:finance_app/features/auth/widgets/create_new_password.dart';
+import 'package:finance_app/features/auth/widgets/forgot_password.dart';
+import 'package:finance_app/features/auth/widgets/password_changed.dart';
+import 'package:finance_app/features/main_screen/main_widgets/main_screen.dart';
+import 'package:finance_app/features/verify_otp/OTP_verification.dart';
 import 'package:finance_app/features/auth/login_screen.dart';
-import 'package:finance_app/features/auth/password_changed.dart';
-import 'package:finance_app/features/auth/register_screen.dart';
+import 'package:finance_app/features/auth/widgets/register_screen.dart';
 import 'package:finance_app/features/on_boarding_screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -45,6 +47,16 @@ class RouterGeneration {
         path: AppRoutes.passwordChanged,
         name: AppRoutes.passwordChanged,
         builder: (context, state) => PasswordChanged(),
+      ),
+      GoRoute(
+        path: AppRoutes.otpVerification,
+        name: AppRoutes.otpVerification,
+        builder: (context, state) => OtpVerification(),
+      ),
+      GoRoute(
+        path: AppRoutes.mainScreen,
+        name: AppRoutes.mainScreen,
+        builder: (context, state) => MainScreen(),
       ),
     ],
   );

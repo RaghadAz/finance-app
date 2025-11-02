@@ -4,7 +4,7 @@ import 'package:finance_app/core/styling/app_styles.dart';
 import 'package:finance_app/core/widgets/custom_text_field.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
 import 'package:finance_app/core/widgets/spacing_widget.dart';
-import 'package:finance_app/features/auth/widgets/back_button_widget.dart';
+import 'package:finance_app/core/widgets/back_button_widget.dart';
 import 'package:finance_app/features/auth/widgets/custom_or_login_widget.dart';
 import 'package:finance_app/features/auth/widgets/social_login_buttons.dart';
 import 'package:flutter/material.dart';

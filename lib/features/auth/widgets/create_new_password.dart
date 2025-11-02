@@ -3,7 +3,7 @@ import 'package:finance_app/core/styling/app_styles.dart';
 import 'package:finance_app/core/widgets/custom_text_field.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
 import 'package:finance_app/core/widgets/spacing_widget.dart';
-import 'package:finance_app/features/auth/widgets/back_button_widget.dart';
+import 'package:finance_app/core/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -57,6 +57,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       if (value.length < 8) {
                         return "Password must be more than 8 character";
                       }
+                      return null;
                     },
                   ),
                   HeightSpace(height: 15.h),
@@ -70,6 +71,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                       if (value.length < 8) {
                         return "Password must be more than 8 character";
                       }
+                      return "";
                     },
                   ),
                   HeightSpace(height: 38.h),
